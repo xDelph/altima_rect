@@ -1,0 +1,223 @@
+body {
+	max-width: 768px;
+	text-align: center;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+    font-size: 0.8em;
+}
+
+#header, #body, #footer {
+    text-align: initial;
+}
+
+#body {
+    padding: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* HEADER */
+#header {
+    margin-top: 5px;
+}
+
+#logo {
+	width: 60px;
+	height: 30px;
+	background-color: black;
+	float: left;
+}
+
+#loginForm {
+	float: right;
+}
+
+#menu {
+	clear: both;
+	padding-top: 10px;
+}
+
+#menu .menuItem {
+	float: right;
+	padding-left: 20px; 
+}
+
+#menuBar {
+	clear: both;
+	margin: 0 -100%;
+	height: 10px;
+	background-color: red;
+}
+
+
+/* BODY */
+
+#body h1 {
+    margin: auto;
+    text-align: center;
+}
+
+#newsletter, #contact {
+    margin-top: 15px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: lightgrey;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+#newsletter, #articleList {
+    float: left;
+    width: 45%;
+}
+
+#articleList.big {
+    width: 100%;
+}
+
+#newsletter {
+    margin-bottom: 15px;
+}
+
+#subscribeForm {
+    margin-top: 10px;
+}
+
+#subscribeForm input {
+    width: 200px;
+    margin-right: 20px;
+}
+
+#contact {
+    float: right;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+#contact .num {
+    margin-top: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#contactForm {
+    margin-top: 10px;
+}
+
+#contactForm label {
+    display: inline-block;
+}
+
+#contactForm label, #contactForm button, #contactForm .mandatory, #contactForm .validation {
+    float: right;
+    clear: both;
+}
+
+#contactForm label, #contactForm .mandatory, #contactForm .validation {
+    padding-right: 40px;
+}
+
+#contactForm input {
+    margin-left: 10px;
+    width: 150px;
+}
+
+#contactForm textarea {
+    width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    height: 80px;
+}
+
+#contactForm .mandatory {
+    color: darkgrey;
+}
+
+#contactForm .validation {
+    color: red;
+}
+
+#contactForm .send {
+    margin-top: 10px;
+}
+
+#contactForm button {
+    margin-top: 10px;
+    margin-right: 50px;
+} 
+
+#articleList {
+
+}
+
+#articleList .article {
+    width: 100%;
+    clear: both;
+    margin: 10px 0;
+}
+
+#articleList .article .thumbs {
+    float: left;
+    margin-right: 10px;
+}
+
+#articleList .article .content {
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+#articleList .article .plus {
+    padding-left: 25px;
+    display: inline;
+}
+
+#articleList .article .prev {
+    padding-left: 25px;
+    float: left;
+}
+
+#articleList .article .next {
+    padding-right: 25px;
+    float: right;
+}
+
+#carousel {
+    clear: both;
+    padding-top: 20px;
+}
+
+#carousel img {
+    padding: 0 5px;
+}
+
+.slick-slider {
+    margin: 0 50px;
+}
+
+.slick-list {
+    height: 80px;
+}
+
+.slick-next, .slick-prev {
+	background: 0 0;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 20px;
+    line-height: 1;
+    color: #00558B;
+    opacity: .75;
+}
+
+
+/* FOOTER */
+
+#footer {
+    margin-bottom: 5px;
+    text-align: center;
+}

@@ -17,6 +17,10 @@ module.exports = {
           // Arguments passés à babel https://babeljs.io/docs/plugins/
           presets: ['es2015', 'stage-0', 'react']
         }
+      },
+      {
+        test: /\.css$/, // On fait de même pour tous les fichiers .scss
+        loaders: ['style', 'css', ]
       }
     ]
   }
