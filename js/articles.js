@@ -14,7 +14,9 @@ class Article extends Component {
 
 	componentDidMount() {
 	    this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function(topic, id) {
+	    	// ce n'est pas l'article a montré, on le cache
 	      	if (this.props.data.id != id) this.setState({ hidden: 'hidden' });
+	      	// c'est le bon article, on le display et on active le grand format avec view = true
 	      	else this.setState({ hidden: '', view: true });
 	  	}.bind(this));
 
@@ -55,6 +57,7 @@ class Article extends Component {
 				<div className="date">{this.props.data.date}</div>
 				
 					{(() => {
+						// petit format
 						if (!this.state.view) {
 							return (
 								<div>
@@ -63,6 +66,7 @@ class Article extends Component {
 								</div>
 							)
 						}
+						// grand format
 						else {
 							return (
 								<div>

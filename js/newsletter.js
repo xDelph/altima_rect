@@ -4,10 +4,12 @@ export class Newsletter extends Component {
 	state = { mail: '', hidden: '' }
 
 	componentDidMount() {
+		// un article se display en grand format, on hide la zone de newsletter
 	    this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function(topic, id) {
 	      this.setState({ hidden: 'hidden' });
 	  	}.bind(this));
 
+	    // on redisplay la zone de newsletter
 	  	this.pubsub_token_show = PubSub.subscribe('articleViewHide', function(topic, id) {
 	      this.setState({ hidden: '' });
 	  	}.bind(this));

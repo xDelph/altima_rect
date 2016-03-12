@@ -4,6 +4,7 @@ class Menu extends Component {
 	state: {}
 
 	handleClick = (e) => {
+		// on retourne a l'acceuil standard
 		PubSub.publish('articleViewHide', -1);
 	}
 

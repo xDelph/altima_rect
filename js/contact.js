@@ -13,10 +13,12 @@ export class Newsletter extends Component {
 	}
 
 	componentDidMount() {
+		// un article se display en grand format, on hide la zone de contact
 	    this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function(topic, id) {
 	      this.setState({ hidden: 'hidden' });
 	  	}.bind(this));
 
+	    // on redisplay la zone de contact
 	  	this.pubsub_token_show = PubSub.subscribe('articleViewHide', function(topic, id) {
 	      this.setState({ hidden: '' });
 	  	}.bind(this));
@@ -36,6 +38,7 @@ export class Newsletter extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault()
 
+		// une validation avec model serait plus judicieux, like backbone.js par example
 		if (this.state.name.length < 3) this.setState({validation: "name must have 3 characters at least"})
 		else if (this.state.firstname.length < 3) this.setState({validation: "firstname must have 3 characters at least"})
 		else if (!/^.+@.+\..+$/.test(this.state.mail)) this.setState({validation: "the e-mail isn't valid"})
