@@ -64,11 +64,11 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _body = __webpack_require__(167);
+	var _body = __webpack_require__(168);
 
 	var _body2 = _interopRequireDefault(_body);
 
-	var _footer = __webpack_require__(193);
+	var _footer = __webpack_require__(195);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
@@ -86,50 +86,6 @@
 	_reactDom2.default.render(_react2.default.createElement(_body2.default, null), document.getElementById('body'));
 
 	_reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('footer'));
-
-	function getQueryParams(qs) {
-	  qs = qs.split('+').join(' ');
-
-	  var params = {},
-	      tokens,
-	      re = /[?&]?([^=]+)=([^&]*)/g;
-
-	  while (tokens = re.exec(qs)) {
-	    params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-	  }
-
-	  return params;
-	}
-
-	/*
-
-	// On importe les librairies nécessaires et le composant React
-	import React from 'react'
-	import ReactDOM from 'react-dom'
-
-	var LikeButton = React.createClass({
-	  getInitialState: function() {
-	    return {liked: false};
-	  },
-	  handleClick: function(event) {
-	    this.setState({liked: !this.state.liked});
-	  },
-	  render: function() {
-	    var text = this.state.liked ? 'like' : 'haven\'t liked';
-	    return (
-	      <p onClick={this.handleClick}>
-	        You {text} this. Click to toggle.
-	      </p>
-	    );
-	  }
-	});    
-
-	ReactDOM.render(
-	  <LikeButton />,
-	  document.getElementById("root")
-	);
-
-	*/
 
 /***/ },
 /* 1 */
@@ -20018,7 +19974,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n\tmax-width: 768px;\n\ttext-align: center;\n\tmargin: 0 auto;\n\t/*border: 1px solid black;*/\n    font-size: 0.8em;\n}\n\n#header, #body, #footer {\n    text-align: initial;\n}\n\n#body {\n    padding: 20px 0;\n}\n\n.hidden {\n    display: none;\n}\n\n\n/* HEADER */\n#header {\n    margin-top: 5px;\n}\n\n#logo {\n\twidth: 60px;\n\theight: 30px;\n\tbackground-color: black;\n\tfloat: left;\n}\n\n#loginForm {\n\tfloat: right;\n}\n\n#menu {\n\tclear: both;\n\tpadding-top: 10px;\n}\n\n#menu .menuItem {\n\tfloat: right;\n\tpadding-left: 20px; \n}\n\n#menuBar {\n\tclear: both;\n\tmargin: 0 -100%;\n\theight: 10px;\n\tbackground-color: red;\n}\n\n\n/* BODY */\n\n#body h1 {\n    margin: auto;\n    text-align: center;\n}\n\n#newsletter, #contact {\n    margin-top: 15px;\n    border: 1px solid black;\n    padding: 15px;\n    background-color: lightgrey;\n    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */\n    -moz-box-sizing: border-box;    /* Firefox, other Gecko */\n    box-sizing: border-box;\n}\n\n#newsletter, #articleList {\n    float: left;\n    width: 45%;\n}\n\n#articleList.big {\n    width: 100%;\n}\n\n#newsletter {\n    margin-bottom: 15px;\n}\n\n#subscribeForm {\n    margin-top: 10px;\n}\n\n#subscribeForm input {\n    width: 200px;\n    margin-right: 20px;\n}\n\n#contact {\n    float: right;\n    width: 50%;\n    margin-bottom: 100px;\n}\n\n#contact .num {\n    margin-top: 10px;\n    border-top: 1px solid black;\n    border-bottom: 1px solid black;\n    text-align: center;\n}\n\n#contactForm {\n    margin-top: 10px;\n}\n\n#contactForm label {\n    display: inline-block;\n}\n\n#contactForm label, #contactForm button, #contactForm .mandatory, #contactForm .validation {\n    float: right;\n    clear: both;\n}\n\n#contactForm label, #contactForm .mandatory, #contactForm .validation {\n    padding-right: 40px;\n}\n\n#contactForm input {\n    margin-left: 10px;\n    width: 150px;\n}\n\n#contactForm textarea {\n    width: 150px;\n    max-width: 150px;\n    max-height: 150px;\n    height: 80px;\n}\n\n#contactForm .mandatory {\n    color: darkgrey;\n}\n\n#contactForm .validation {\n    color: red;\n}\n\n#contactForm .send {\n    margin-top: 10px;\n}\n\n#contactForm button {\n    margin-top: 10px;\n    margin-right: 50px;\n} \n\n#articleList {\n\n}\n\n#articleList .article {\n    width: 100%;\n    clear: both;\n    margin: 10px 0;\n}\n\n#articleList .article .thumbs {\n    float: left;\n    margin-right: 10px;\n}\n\n#articleList .article .content {\n    padding-top: 5px;\n    padding-bottom: 8px;\n}\n\n#articleList .article .plus {\n    padding-left: 25px;\n    display: inline;\n}\n\n#articleList .article .prev {\n    padding-left: 25px;\n    float: left;\n}\n\n#articleList .article .next {\n    padding-right: 25px;\n    float: right;\n}\n\n#carousel {\n    clear: both;\n    padding-top: 20px;\n}\n\n#carousel img {\n    padding: 0 5px;\n}\n\n.slick-slider {\n    margin: 0 50px;\n}\n\n.slick-list {\n    height: 80px;\n}\n\n.slick-next, .slick-prev {\n\tbackground: 0 0;\n}\n\n.slick-next:before, .slick-prev:before {\n    font-size: 20px;\n    line-height: 1;\n    color: #00558B;\n    opacity: .75;\n}\n\n\n/* FOOTER */\n\n#footer {\n    margin-bottom: 5px;\n    text-align: center;\n}", ""]);
+	exports.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n    display: block;\n}\nbody {\n    line-height: 1;\n}\nol, ul {\n    list-style: none;\n}\nblockquote, q {\n    quotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n    content: '';\n    content: none;\n}\ntable {\n    border-collapse: collapse;\n    border-spacing: 0;\n}\n\n\n/* ALTIMA CSS */\n\nbody {\n\tmax-width: 768px;\n\ttext-align: center;\n\tmargin: 0 auto;\n\t/*border: 1px solid black;*/\n    font-size: 0.8em;\n}\n\na:hover {\n    cursor: pointer; cursor: hand;\n}\n\na[disabled]:hover {\n    cursor: initial;\n}\n\n#header, #body, #footer {\n    text-align: initial;\n}\n\n#body {\n    padding: 20px 0;\n    color: grey;\n}\n\n.hidden {\n    display: none;\n}\n\n\n/* HEADER */\n#header {\n    margin-top: 5px;\n    position: relative;\n}\n\n#logo {\n    position: absolute;\n    top: 10px;\n    left: 20px;\n    font-size: 3em;\n\tfloat: left;\n    font-weight: bold;\n}\n\n#logo .dot {\n    color: rgb(193, 10, 66);\n}\n\n#loginForm {\n\tfloat: right;\n    padding-top: 10px;\n}\n\n#loginForm input {\n    margin-right: 10px;\n}\n\n#menu {\n\tclear: both;\n\tpadding-top: 20px;\n}\n\n#menu .menuItem {\n\tfloat: right;\n\tmargin-left: 50px; \n    position: relative;\n}\n\n#menu .menuItem a {\n    color: rgb(193, 10, 66);\n    font-weight: bold;\n}\n\n#menu .menuItem .shape {\n    position: absolute;\n    top: 20px; left: 0;\n    width:100%; height: 10px; \n    background: rgb(140, 10, 66);\n}\n#menu .menuItem .shape:before {\n    content: \"\";\n    position: absolute;\n    top: 10px; right: 0;\n    width: 50%; height: 8px;\n    background: linear-gradient(to right bottom, rgb(140, 10, 66) 50%, transparent 50%)\n}\n\n#menu .menuItem .shape:after {\n    content: \"\";\n    position: absolute;\n    top: 10px; left: 0;\n    width: 50%; height: 8px;\n    background: linear-gradient(to left bottom, rgb(140, 10, 66) 50%, transparent 50%)\n}\n\n#menuSeparator {\n    clear: both;\n    height: 7px;\n}\n\n#menuBar {\n\tclear: both;\n\tmargin: 0 -100%;\n\theight: 10px;\n\tbackground-color: rgb(193, 10, 66);\n}\n\n\n/* BODY */\n\n#body h1.title {\n    margin: auto;\n    text-align: center;\n    color: lightgrey;\n    font-size: 2.8em;\n    margin-bottom: 10px;\n}\n\n\n#newsletter, #contact {\n    margin-top: 15px;\n    border: 1px solid darkgrey;\n    border-radius: 10px;\n    padding: 15px;\n    background-color: lightgrey;\n\n    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */\n    -moz-box-sizing: border-box;    /* Firefox, other Gecko */\n    box-sizing: border-box;\n\n    -webkit-box-shadow: inset -1px 3px 4px 0px darkgrey;\n    -moz-box-shadow: inset -1px 3px 4px 0px darkgrey;\n    box-shadow: inset -1px 3px 4px 0px darkgrey;\n}\n\n#newsletter, #articleList {\n    float: left;\n    width: 45%;\n}\n\n#newsletter {\n    margin-bottom: 15px;\n}\n\n#subscribeForm {\n    margin-top: 10px;\n}\n\n#subscribeForm input {\n    width: 200px;\n    margin-right: 20px;\n}\n\n#contact {\n    float: right;\n    width: 50%;\n    margin-bottom: 100px;\n}\n\n#contact .num {\n    margin: 10px 0px;\n    padding: 3px 0px;\n    color: rgb(193, 10, 66);\n    font-weight: bold;\n    font-size: 1.1em;\n    border-top: 1px solid darkgrey;\n    border-bottom: 1px solid darkgrey;\n    text-align: center;\n}\n\n#contactForm {\n    margin-top: 10px;\n}\n\n#contactForm label {\n    display: inline-block;\n    color: black;\n    margin-bottom: 5px;\n}\n\n#contactForm label, #contactForm button, #contactForm .mandatory, #contactForm .validation {\n    float: right;\n    clear: both;\n}\n\n#contactForm label, #contactForm .mandatory, #contactForm .validation {\n    padding-right: 40px;\n}\n\n#contactForm input, #contactForm select, #contactForm textarea {\n    margin-left: 10px;\n    width: 150px;\n    color: black;\n}\n\n#contactForm select {\n    width: 156px;\n}\n\n#contactForm textarea {\n    max-width: 150px;\n    max-height: 150px;\n    height: 80px;\n}\n\n#contactForm .mandatory {\n    color: darkgrey;\n}\n\n#contactForm .validation {\n    color: rgb(193, 10, 66);\n}\n\n#contactForm .send {\n    margin-top: 10px;\n}\n\n#contactForm button {\n    margin-top: 10px;\n    margin-right: 50px;\n} \n\n#articleList {\n\n}\n\n#articleList.bigFormat {\n    width: 100%;\n}\n\n#articleList .article {\n    width: 100%;\n    clear: both;\n    margin: 10px 0;\n}\n\n#articleList .article p {\n    margin: 5px 0 10px 0;\n}\n\n#articleList .article .thumbs {\n    float: left;\n    margin-right: 10px;\n}\n\n#articleList .article .title {\n    font-size: 1.1em;\n    padding-top: 10px;\n    color: rgb(193, 10, 66);\n}\n\n#articleList .article .date {\n    font-size: 0.8em;\n    text-indent: 20px;\n}\n\n#articleList .article .data {\n    position: relative;\n}\n\n#articleList .article .content {\n    padding-top: 5px;\n    padding-bottom: 8px;\n}\n\n#articleList .article .plus {\n    position: absolute;\n    right: 5px;\n    color: rgb(193, 10, 66);\n    text-decoration: underline;\n}\n\n#articleList .article .prev, #articleList .article .next {\n    color: black;\n}\n\n#articleList .article .prev {\n    padding-left: 25px;\n    float: left;\n}\n\n#articleList .article .next {\n    padding-right: 25px;\n    float: right;\n}\n\n#carousel {\n    clear: both;\n    padding-top: 20px;\n}\n\n#carousel .title {\n    color: rgb(193, 10, 66);\n    font-size: 1.3em;\n    font-weight: bold;\n}\n\n#carousel img {\n    padding: 0 5px;\n}\n\n.slick-slider {\n    margin: 0 50px;\n    padding-top: 10px;\n}\n\n.slick-list {\n    height: 80px;\n}\n\n.slick-next, .slick-prev {\n\tbackground: 0 0;\n}\n\n.slick-next:before, .slick-prev:before {\n    font-size: 20px;\n    line-height: 1;\n    color: #00558B;\n    opacity: .75;\n}\n\n\n/* FOOTER */\n\n#footer {\n    margin-bottom: 5px;\n    text-align: center;\n    font-weight: bold;\n}", ""]);
 
 	// exports
 
@@ -20353,7 +20309,7 @@
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _menu = __webpack_require__(166);
+	var _menu = __webpack_require__(167);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -20380,7 +20336,16 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement('div', { id: 'logo' }),
+					_react2.default.createElement(
+						'div',
+						{ id: 'logo' },
+						'altima',
+						_react2.default.createElement(
+							'span',
+							{ className: 'dot' },
+							'°'
+						)
+					),
 					_react2.default.createElement(_login2.default, null),
 					_react2.default.createElement(_menu2.default, null)
 				);
@@ -20409,6 +20374,10 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _formUtils = __webpack_require__(166);
+
+	var _formUtils2 = _interopRequireDefault(_formUtils);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20447,30 +20416,18 @@
 	    value: function render() {
 	      var _this2 = this;
 
+	      var disableSubmit = !this.state.username || !this.state.password;
+
 	      return _react2.default.createElement(
 	        'form',
 	        { id: 'loginForm', className: 'columns small-12 medium-3', onSubmit: this.handleSubmit },
-	        _react2.default.createElement(
-	          'label',
-	          null,
-	          'Username',
-	          _react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-	              return _this2.handleChange(e, 'username');
-	            }, value: this.state.username })
-	        ),
-	        _react2.default.createElement(
-	          'label',
-	          null,
-	          'Password',
-	          _react2.default.createElement('input', { type: 'password', onChange: function onChange(e) {
-	              return _this2.handleChange(e, 'password');
-	            }, value: this.state.password })
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { type: 'submit', disabled: !this.state.username || !this.state.password, className: 'primary button float-right' },
-	          'Log in'
-	        )
+	        _formUtils2.default.getInput({ type: "text", placeholder: "Votre login", onChange: function onChange(e) {
+	            return _this2.handleChange(e, "username");
+	          }, value: this.state.username }),
+	        _formUtils2.default.getInput({ type: "password", placeholder: "Votre mot de passe", onChange: function onChange(e) {
+	            return _this2.handleChange(e, "password");
+	          }, value: this.state.password }),
+	        _formUtils2.default.getButton({ type: "submit", disabled: disableSubmit }, "Ok")
 	      );
 	    }
 	  }]);
@@ -20487,6 +20444,70 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+		getInputLabeled: function getInputLabeled(labelText, attributs) {
+			return _react2.default.createElement(
+				'label',
+				null,
+				labelText,
+				this.getInput(attributs)
+			);
+		},
+
+		getInput: function getInput(attributs) {
+			return _react2.default.createElement('input', attributs);
+		},
+
+		getSelectLabeled: function getSelectLabeled(labelText, attributs, options) {
+			return _react2.default.createElement(
+				'label',
+				null,
+				labelText,
+				this.getSelect(attributs, options)
+			);
+		},
+
+		getSelect: function getSelect(attributs, options) {
+			var reactOptions = [];
+			for (var i = 0; i < options.length; i++) {
+				reactOptions.push(_react2.default.createElement('option', { key: i, value: options[i] }, options[i]));
+			}return _react2.default.createElement('select', attributs, reactOptions);
+		},
+
+		getTextAreaLabeled: function getTextAreaLabeled(labelText, attributs) {
+			return _react2.default.createElement(
+				'label',
+				null,
+				labelText,
+				this.getTextArea(attributs)
+			);
+		},
+
+		getTextArea: function getTextArea(attributs) {
+			return _react2.default.createElement('textarea', attributs);
+		},
+
+		getButton: function getButton(attributs, text) {
+			return _react2.default.createElement('button', attributs, text);
+		}
+	};
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -20520,54 +20541,84 @@
 				args[_key] = arguments[_key];
 			}
 
-			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Menu)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.handleClick = function (e) {
-				PubSub.publish('articleViewHide', -1);
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Menu)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
+				displayContact: "none",
+				displayActu: "none",
+				displayAbout: "none",
+				displayHome: "block"
+			}, _this.handleClickHome = function (e) {
+				PubSub.publish("modifyArticleState", -1);
+				PubSub.publish("modifyHomeState", "block");
+
+				if (history.pushState) history.pushState(null, null, '#');else document.location.hash = '#';
+			}, _this.handleClickActu = function (e) {
+				PubSub.publish("modifyArticleState", 0);
+				PubSub.publish("modifyHomeState", "none");
+
+				if (history.pushState) history.pushState(null, null, '#{0}');else document.location.hash = '#{0}';
 			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
 		_createClass(Menu, [{
-			key: 'render',
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				this.pubsub_token = PubSub.subscribe('modifyArticleState', function (topic, id) {
+					if (id == -1) this.setState({ displayHome: "block", displayActu: "none" });else this.setState({ displayHome: "none", displayActu: "block" });
+				}.bind(this));
+			}
+		}, {
+			key: "componentWillUnmount",
+			value: function componentWillUnmount() {
+				PubSub.unsubscribe(this.pubsub_token);
+			}
+		}, {
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'div',
-					{ id: 'menu' },
+					"div",
+					{ id: "menu" },
 					_react2.default.createElement(
-						'div',
-						{ className: 'menuItem' },
+						"div",
+						{ className: "menuItem" },
 						_react2.default.createElement(
-							'a',
-							null,
-							'CONTACT'
-						)
+							"a",
+							{ disabled: true },
+							"CONTACT"
+						),
+						_react2.default.createElement("span", { style: { display: this.state.displayContact }, className: "shape" })
 					),
 					_react2.default.createElement(
-						'div',
-						{ className: 'menuItem' },
+						"div",
+						{ className: "menuItem" },
 						_react2.default.createElement(
-							'a',
-							null,
-							'QUI SOMMES NOUS ?'
-						)
+							"a",
+							{ disabled: true },
+							"QUI SOMMES NOUS ?"
+						),
+						_react2.default.createElement("span", { style: { display: this.state.displayAbout }, className: "shape" })
 					),
 					_react2.default.createElement(
-						'div',
-						{ className: 'menuItem' },
+						"div",
+						{ className: "menuItem", onClick: this.handleClickActu },
 						_react2.default.createElement(
-							'a',
+							"a",
 							null,
-							'ACTUALITÉS'
-						)
+							"ACTUALITÉS"
+						),
+						_react2.default.createElement("span", { style: { display: this.state.displayActu }, className: "shape" })
 					),
 					_react2.default.createElement(
-						'div',
-						{ className: 'menuItem', onClick: this.handleClick },
+						"div",
+						{ className: "menuItem", onClick: this.handleClickHome },
 						_react2.default.createElement(
-							'a',
+							"a",
 							null,
-							'ACCUEIL'
-						)
+							"ACCUEIL"
+						),
+						_react2.default.createElement("span", { style: { display: this.state.displayHome }, className: "shape" })
 					),
-					_react2.default.createElement('div', { id: 'menuBar' })
+					_react2.default.createElement("div", { id: "menuSeparator" }),
+					_react2.default.createElement("div", { id: "menuBar" })
 				);
 			}
 		}]);
@@ -20580,7 +20631,7 @@
 	exports.default = Menu;
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20595,19 +20646,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _newsletter = __webpack_require__(168);
+	var _newsletter = __webpack_require__(169);
 
 	var _newsletter2 = _interopRequireDefault(_newsletter);
 
-	var _contact = __webpack_require__(169);
+	var _contact = __webpack_require__(170);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
-	var _articles = __webpack_require__(170);
+	var _articleList = __webpack_require__(171);
 
-	var _articles2 = _interopRequireDefault(_articles);
+	var _articleList2 = _interopRequireDefault(_articleList);
 
-	var _carousel = __webpack_require__(172);
+	var _carousel = __webpack_require__(174);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
@@ -20623,12 +20674,32 @@
 		_inherits(Body, _Component);
 
 		function Body() {
+			var _Object$getPrototypeO;
+
+			var _temp, _this, _ret;
+
 			_classCallCheck(this, Body);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Body).apply(this, arguments));
+			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+				args[_key] = arguments[_key];
+			}
+
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Body)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = { display: 'block' }, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
 		_createClass(Body, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.pubsub_token = PubSub.subscribe('modifyArticleState', function (topic, id) {
+					if (id == -1) this.setState({ display: 'block' });else this.setState({ display: 'none' });
+				}.bind(this));
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				PubSub.unsubscribe(this.pubsub_token);
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -20636,12 +20707,12 @@
 					null,
 					_react2.default.createElement(
 						'h1',
-						null,
-						'TEST D\'INTÉGRATION'
+						{ style: { display: this.state.display }, className: 'title' },
+						'Test d\'intégration'
 					),
 					_react2.default.createElement(_newsletter2.default, null),
 					_react2.default.createElement(_contact2.default, null),
-					_react2.default.createElement(_articles2.default, null),
+					_react2.default.createElement(_articleList2.default, null),
 					_react2.default.createElement(_carousel2.default, null)
 				);
 			}
@@ -20655,7 +20726,7 @@
 	exports.default = Body;
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20670,6 +20741,10 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _formUtils = __webpack_require__(166);
+
+	var _formUtils2 = _interopRequireDefault(_formUtils);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20695,51 +20770,53 @@
 				args[_key] = arguments[_key];
 			}
 
-			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Newsletter)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = { mail: '', hidden: '' }, _this.handleChange = function (e, field) {
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Newsletter)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = { mail: '', display: 'block' }, _this.handleChange = function (e, field) {
 				_this.setState(_defineProperty({}, field, e.target.value));
+			}, _this.handleSubmit = function (e) {
+				e.preventDefault();
+				alert('Thanks for subscribing');
 			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
 		_createClass(Newsletter, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function (topic, id) {
-					this.setState({ hidden: 'hidden' });
-				}.bind(this));
-
-				this.pubsub_token_show = PubSub.subscribe('articleViewHide', function (topic, id) {
-					this.setState({ hidden: '' });
+				this.pubsub_token = PubSub.subscribe('modifyHomeState', function (topic, display) {
+					this.setState({ display: display });
 				}.bind(this));
 			}
 		}, {
 			key: 'componentWillUnmount',
 			value: function componentWillUnmount() {
-				PubSub.unsubscribe(this.pubsub_token_hide);
-				PubSub.unsubscribe(this.pubsub_token_show);
+				PubSub.unsubscribe(this.pubsub_token);
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				var _this2 = this;
 
+				var disableSubmit = !this.state.mail;
+
 				return _react2.default.createElement(
 					'div',
-					{ id: 'newsletter', className: this.state.hidden },
-					'LA NEWSLETTER',
-					_react2.default.createElement('br', null),
-					'L\'actu et les bonnes affaires à ne pas manquer',
-					_react2.default.createElement('br', null),
+					{ id: 'newsletter', style: { display: this.state.display } },
+					_react2.default.createElement(
+						'p',
+						null,
+						'LA NEWSLETTER'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'L\'actu et les bonnes affaires à ne pas manquer'
+					),
 					_react2.default.createElement(
 						'form',
 						{ id: 'subscribeForm', onSubmit: this.handleSubmit },
-						_react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-								return _this2.handleChange(e, 'mail');
-							}, placeholder: 'Votre adresse e-mail', value: this.state.mail }),
-						_react2.default.createElement(
-							'button',
-							{ type: 'submit', disabled: !this.state.username || !this.state.password, className: 'primary button float-right' },
-							'Ok'
-						)
+						_formUtils2.default.getInput({ type: "text", placeholder: "Votre adresse e-mail", onChange: function onChange(e) {
+								return _this2.handleChange(e, "mail");
+							}, value: this.state.mail }),
+						_formUtils2.default.getButton({ type: "submit", disabled: disableSubmit }, "Ok")
 					)
 				);
 			}
@@ -20751,7 +20828,7 @@
 	exports.default = Newsletter;
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20767,6 +20844,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _formUtils = __webpack_require__(166);
+
+	var _formUtils2 = _interopRequireDefault(_formUtils);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -20776,6 +20857,17 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function getInputLabeled(labelText, inputType, handleChange, inputChange, inputValue) {
+		return _react2.default.createElement(
+			'label',
+			null,
+			labelText,
+			_react2.default.createElement('input', { type: inputType, onChange: function onChange(e) {
+					return handleChange(e, inputChange);
+				}, value: inputValue })
+		);
+	}
 
 	var Newsletter = exports.Newsletter = function (_Component) {
 		_inherits(Newsletter, _Component);
@@ -20799,12 +20891,13 @@
 				message: '',
 				validation: '',
 				send: false,
-				hidden: ''
+				display: 'block'
 			}, _this.handleChange = function (e, field) {
 				_this.setState(_defineProperty({}, field, e.target.value));
 			}, _this.handleSubmit = function (e) {
 				e.preventDefault();
 
+				// une validation avec model serait plus judicieux, like backbone.js par example
 				if (_this.state.name.length < 3) _this.setState({ validation: "name must have 3 characters at least" });else if (_this.state.firstname.length < 3) _this.setState({ validation: "firstname must have 3 characters at least" });else if (!/^.+@.+\..+$/.test(_this.state.mail)) _this.setState({ validation: "the e-mail isn't valid" });else _this.setState({ validation: '', send: true });
 
 				return false;
@@ -20814,32 +20907,37 @@
 		_createClass(Newsletter, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function (topic, id) {
-					this.setState({ hidden: 'hidden' });
-				}.bind(this));
-
-				this.pubsub_token_show = PubSub.subscribe('articleViewHide', function (topic, id) {
-					this.setState({ hidden: '' });
+				this.pubsub_token = PubSub.subscribe('modifyHomeState', function (topic, display) {
+					this.setState({ display: display });
 				}.bind(this));
 			}
 		}, {
 			key: 'componentWillUnmount',
 			value: function componentWillUnmount() {
-				PubSub.unsubscribe(this.pubsub_token_hide);
-				PubSub.unsubscribe(this.pubsub_token_show);
+				PubSub.unsubscribe(this.pubsub_token);
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				var _this2 = this;
 
+				var disableSubmit = !this.state.name || !this.state.firstname || !this.state.mail || !this.state.object || !this.state.message;
+				var showErrorMessage = this.state.validation != '' ? { display: "block" } : { display: "none" };
+				var showFormSend = this.state.send ? { display: "block" } : { display: "none" };
+
 				return _react2.default.createElement(
 					'div',
-					{ id: 'contact', className: this.state.hidden },
-					'CONTACTEZ NOUS PAR TÉLÉPHONE OU PAR E-MAIL',
-					_react2.default.createElement('br', null),
-					'Contrary to popular belief. Lorem ipsum is not simply random text.',
-					_react2.default.createElement('br', null),
+					{ id: 'contact', style: { display: this.state.display } },
+					_react2.default.createElement(
+						'p',
+						null,
+						'CONTACTEZ NOUS PAR TÉLÉPHONE OU PAR E-MAIL'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Contrary to popular belief. Lorem ipsum is not simply random text.'
+					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'num' },
@@ -20848,50 +20946,21 @@
 					_react2.default.createElement(
 						'form',
 						{ id: 'contactForm', onSubmit: this.handleSubmit, style: !this.state.send ? { display: "block" } : { display: "none" } },
-						_react2.default.createElement(
-							'label',
-							null,
-							'Nom : *',
-							_react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-									return _this2.handleChange(e, 'name');
-								}, value: this.state.name })
-						),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement(
-							'label',
-							null,
-							'Prénom : *',
-							_react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-									return _this2.handleChange(e, 'firstname');
-								}, value: this.state.firstname })
-						),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement(
-							'label',
-							null,
-							'Addresse e-mail : *',
-							_react2.default.createElement('input', { type: 'text', className: 'obligatoire', onChange: function onChange(e) {
-									return _this2.handleChange(e, 'mail');
-								}, value: this.state.mail })
-						),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement(
-							'label',
-							null,
-							'Objet du message : *',
-							_react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-									return _this2.handleChange(e, 'object');
-								}, value: this.state.object })
-						),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement(
-							'label',
-							null,
-							'Message : *',
-							_react2.default.createElement('textarea', { onChange: function onChange(e) {
-									return _this2.handleChange(e, 'message');
-								}, value: this.state.message })
-						),
+						_formUtils2.default.getInputLabeled("Nom : *", { type: "text", onChange: function onChange(e) {
+								return _this2.handleChange(e, "name");
+							}, value: this.state.name }),
+						_formUtils2.default.getInputLabeled("Prénom : *", { type: "text", onChange: function onChange(e) {
+								return _this2.handleChange(e, "firstname");
+							}, value: this.state.firstname }),
+						_formUtils2.default.getInputLabeled("Adresse e-mail : *", { type: "text", onChange: function onChange(e) {
+								return _this2.handleChange(e, "mail");
+							}, value: this.state.mail }),
+						_formUtils2.default.getSelectLabeled("Objet du message : *", { type: "text", onChange: function onChange(e) {
+								return _this2.handleChange(e, "object");
+							} }, ['', 'Plus d\'information', 'Problème']),
+						_formUtils2.default.getTextAreaLabeled("Message : *", { onChange: function onChange(e) {
+								return _this2.handleChange(e, "message");
+							}, value: this.state.message }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'mandatory' },
@@ -20899,18 +20968,14 @@
 						),
 						_react2.default.createElement(
 							'div',
-							{ className: 'validation', style: this.state.validation != '' ? { display: "block" } : { display: "none" } },
+							{ className: 'validation', style: showErrorMessage },
 							this.state.validation
 						),
-						_react2.default.createElement(
-							'button',
-							{ type: 'submit', disabled: !this.state.name || !this.state.firstname || !this.state.mail || !this.state.object || !this.state.message },
-							'Envoyer'
-						)
+						_formUtils2.default.getButton({ type: "submit", disabled: disableSubmit, className: "" }, "Envoyer")
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'send', style: this.state.send ? { display: "block" } : { display: "none" } },
+						{ className: 'send', style: showFormSend },
 						'Thanks'
 					)
 				);
@@ -20923,7 +20988,7 @@
 	exports.default = Newsletter;
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20931,7 +20996,103 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.ArticleList = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _article = __webpack_require__(172);
+
+	var _article2 = _interopRequireDefault(_article);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var articles = __webpack_require__(173);
+
+	var ArticleList = function (_Component) {
+		_inherits(ArticleList, _Component);
+
+		function ArticleList() {
+			var _Object$getPrototypeO;
+
+			var _temp, _this, _ret;
+
+			_classCallCheck(this, ArticleList);
+
+			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+				args[_key] = arguments[_key];
+			}
+
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(ArticleList)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
+				className: ''
+			}, _this.rows = [], _temp), _possibleConstructorReturn(_this, _ret);
+		}
+
+		_createClass(ArticleList, [{
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				for (var l = articles.length, i = 0; i < l; i++) {
+					articles[i].id = i;
+					articles[i].prev = i > 0 ? i - 1 : -1;
+					articles[i].next = i < l - 1 ? i + 1 : -1;
+					articles[i].view = false;
+
+					this.rows.push(_react2.default.createElement(_article2.default, { key: i, data: articles[i] }));
+				}
+			}
+		}, {
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.pubsub_token = PubSub.subscribe('modifyArticleState', function (topic, id) {
+					this.setState({ className: id == -1 ? '' : 'bigFormat' });
+				}.bind(this));
+
+				var hash = document.location.hash;
+				hash = parseInt(hash.substring(hash.indexOf('{') + 1, hash.indexOf('}')));
+
+				if (Number.isInteger(hash) && hash > -1 && hash < articles.length) {
+					PubSub.publish("modifyArticleState", hash);
+					PubSub.publish("modifyHomeState", "none");
+				}
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				PubSub.unsubscribe(this.pubsub_token);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ id: 'articleList', className: this.state.className },
+					this.rows
+				);
+			}
+		}]);
+
+		return ArticleList;
+	}(_react.Component);
+
+	exports.default = ArticleList;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20946,8 +21107,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var articles = __webpack_require__(171);
 
 	var Article = function (_Component) {
 		_inherits(Article, _Component);
@@ -20965,18 +21124,15 @@
 
 			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Article)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
 				view: false,
-				hidden: ''
+				display: 'block',
+				bigFormat: false
 			}, _this.handleClick = function (e) {
-				if (_this.state.view) return;
-
-				_this.setState({ hidden: '', view: true });
-				PubSub.publish("articleViewShow", _this.props.data.id);
+				PubSub.publish("modifyHomeState", "none");
+				PubSub.publish("modifyArticleState", _this.props.data.id);
 			}, _this.handleClickNext = function (e) {
-				PubSub.publish("articleViewShow", _this.props.data.next);
-				_this.setState({ hidden: 'hidden', view: false });
+				PubSub.publish("modifyArticleState", _this.props.data.next);
 			}, _this.handleClickPrev = function (e) {
-				PubSub.publish("articleViewShow", _this.props.data.prev);
-				_this.setState({ hidden: 'hidden', view: false });
+				PubSub.publish("modifyArticleState", _this.props.data.prev);
 			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
@@ -20988,39 +21144,38 @@
 		}, {
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function (topic, id) {
-					if (this.props.data.id != id) this.setState({ hidden: 'hidden' });else this.setState({ hidden: '', view: true });
-				}.bind(this));
+				this.pubsub_token = PubSub.subscribe('modifyArticleState', function (topic, id) {
+					var articleId = this.props.data.id;
 
-				this.pubsub_token_show = PubSub.subscribe('articleViewHide', function (topic, id) {
-					this.setState({ hidden: '', view: false });
+					if (id == -1) this.setState({ display: "block", bigFormat: false });else if (id == articleId) {
+						this.setState({ display: "block", bigFormat: true });
+
+						if (history.pushState) history.pushState(null, null, '#{' + articleId + '}');else document.location.hash = '#{' + articleId + '}';
+					} else this.setState({ display: "none", bigFormat: false });
 				}.bind(this));
 			}
 		}, {
 			key: 'componentWillUnmount',
 			value: function componentWillUnmount() {
-				PubSub.unsubscribe(this.pubsub_token_hide);
-				PubSub.unsubscribe(this.pubsub_token_show);
+				PubSub.unsubscribe(this.pubsub_token);
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				var _this2 = this;
 
-				var className = "article " + this.state.hidden;
-
 				return _react2.default.createElement(
 					'div',
-					{ className: className },
+					{ className: 'article', style: { display: this.state.display } },
 					_react2.default.createElement(
 						'div',
 						{ className: 'thumbs' },
-						_react2.default.createElement('img', { src: this.props.data.thumbnail })
+						_react2.default.createElement('img', { src: !this.state.bigFormat ? this.props.data.thumbnail : this.props.data.picture })
 					),
 					_react2.default.createElement(
-						'div',
+						'a',
 						{ className: 'title', onClick: this.handleClick },
-						this.props.data.title
+						this.props.data.title.toUpperCase()
 					),
 					_react2.default.createElement(
 						'div',
@@ -21028,10 +21183,11 @@
 						this.props.data.date
 					),
 					function () {
-						if (!_this2.state.view) {
+						// petit format
+						if (!_this2.state.bigFormat) {
 							return _react2.default.createElement(
 								'div',
-								null,
+								{ className: 'data' },
 								_react2.default.createElement(
 									'div',
 									{ className: 'content' },
@@ -21039,28 +21195,33 @@
 									'...'
 								),
 								_react2.default.createElement(
-									'div',
-									{ className: 'plus' },
-									'En savoir plus'
-								)
-							);
-						} else {
-							return _react2.default.createElement(
-								'div',
-								null,
-								_react2.default.createElement('div', { className: 'content', dangerouslySetInnerHTML: { __html: _this2.props.data.content } }),
-								_react2.default.createElement(
-									'div',
-									{ className: 'prev', style: _this2.props.data.prev != -1 ? { display: "block" } : { display: "none" }, onClick: _this2.handleClickPrev },
-									'PRÉCÉDENT'
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'next', style: _this2.props.data.next != -1 ? { display: "block" } : { display: "none" }, onClick: _this2.handleClickNext },
-									'SUIVANT'
+									'a',
+									{ className: 'plus', onClick: _this2.handleClick },
+									'En savoir plus >>'
 								)
 							);
 						}
+						// grand format
+						else {
+								var prevDisplay = _this2.props.data.prev != -1 ? { display: "block" } : { display: "none" };
+								var nextDisplay = _this2.props.data.next != -1 ? { display: "block" } : { display: "none" };
+
+								return _react2.default.createElement(
+									'div',
+									{ className: 'data' },
+									_react2.default.createElement('div', { className: 'content', dangerouslySetInnerHTML: { __html: _this2.props.data.content } }),
+									_react2.default.createElement(
+										'a',
+										{ className: 'prev', style: prevDisplay, onClick: _this2.handleClickPrev },
+										'PRÉCÉDENT'
+									),
+									_react2.default.createElement(
+										'a',
+										{ className: 'next', style: nextDisplay, onClick: _this2.handleClickNext },
+										'SUIVANT'
+									)
+								);
+							}
 					}()
 				);
 			}
@@ -21069,76 +21230,10 @@
 		return Article;
 	}(_react.Component);
 
-	var ArticleList = exports.ArticleList = function (_Component2) {
-		_inherits(ArticleList, _Component2);
-
-		function ArticleList() {
-			var _Object$getPrototypeO2;
-
-			var _temp2, _this3, _ret2;
-
-			_classCallCheck(this, ArticleList);
-
-			for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-				args[_key2] = arguments[_key2];
-			}
-
-			return _ret2 = (_temp2 = (_this3 = _possibleConstructorReturn(this, (_Object$getPrototypeO2 = Object.getPrototypeOf(ArticleList)).call.apply(_Object$getPrototypeO2, [this].concat(args))), _this3), _this3.state = {
-				className: ''
-			}, _temp2), _possibleConstructorReturn(_this3, _ret2);
-		}
-
-		_createClass(ArticleList, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function (topic, id) {
-					this.setState({ className: 'big' });
-				}.bind(this));
-
-				this.pubsub_token_show = PubSub.subscribe('articleViewHide', function (topic, id) {
-					this.setState({ className: '' });
-				}.bind(this));
-
-				var hash = document.location.hash;
-				hash = hash.substring(hash.indexOf('{') + 1, hash.indexOf('}'));
-				if (Number.isInteger(hash) && hash > -1 && hash < articles.length) {
-					PubSub.publish("articleViewShow", hash);
-				}
-			}
-		}, {
-			key: 'componentWillUnmount',
-			value: function componentWillUnmount() {
-				PubSub.unsubscribe(this.pubsub_token_hide);
-				PubSub.unsubscribe(this.pubsub_token_show);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var rows = [];
-				for (var l = articles.length, i = 0; i < l; i++) {
-					articles[i].id = i;
-					articles[i].prev = i > 0 ? i - 1 : -1;
-					articles[i].next = i < l - 1 ? i + 1 : -1;
-					articles[i].view = false;
-
-					rows.push(_react2.default.createElement(Article, { key: i, data: articles[i] }));
-				}
-
-				return _react2.default.createElement(
-					'div',
-					{ id: 'articleList', className: this.state.className },
-					rows
-				);
-			}
-		}]);
-
-		return ArticleList;
-	}(_react.Component);
-
-	exports.default = ArticleList;
+	exports.default = Article;
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -21169,7 +21264,7 @@
 	];
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21184,7 +21279,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactSlick = __webpack_require__(173);
+	var _reactSlick = __webpack_require__(175);
 
 	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 
@@ -21246,79 +21341,89 @@
 	    _inherits(Carousel, _Component3);
 
 	    function Carousel() {
+	        var _Object$getPrototypeO;
+
+	        var _temp, _this3, _ret;
+
 	        _classCallCheck(this, Carousel);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Carousel).apply(this, arguments));
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this3 = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(Carousel)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this3), _this3.settings = {
+	            // dots: true,
+	            // infinite: true,
+	            speed: 500,
+	            slidesToShow: 4,
+	            slidesToScroll: 2,
+	            arrows: true,
+	            nextArrow: LeftNavButton,
+	            prevArrow: RightNavButton
+	        }, _this3.div = _react2.default.createElement(
+	            'div',
+	            { id: 'carousel' },
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'title' },
+	                'Découvrer les dernières nouveautés'
+	            ),
+	            _react2.default.createElement(
+	                _reactSlick2.default,
+	                _this3.settings,
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
+	                )
+	            )
+	        ), _temp), _possibleConstructorReturn(_this3, _ret);
 	    }
 
 	    _createClass(Carousel, [{
 	        key: 'render',
 	        value: function render() {
-	            var settings = {
-	                //dots: true,
-	                // infinite: true,
-	                speed: 500,
-	                slidesToShow: 4,
-	                slidesToScroll: 2,
-	                arrows: true,
-	                nextArrow: LeftNavButton,
-	                prevArrow: RightNavButton
-	            };
-
-	            return _react2.default.createElement(
-	                'div',
-	                { id: 'carousel' },
-	                'Découvrer les dernières nouveautés',
-	                _react2.default.createElement(
-	                    _reactSlick2.default,
-	                    settings,
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/c33/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/693/?retina=true' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        _react2.default.createElement('img', { src: 'http://fakeimg.pl/50x40/eee/e33/?retina=true' })
-	                    )
-	                )
-	            );
+	            return this.div;
 	        }
 	    }]);
 
@@ -21330,15 +21435,15 @@
 	exports.default = Carousel;
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = __webpack_require__(174);
+	module.exports = __webpack_require__(176);
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21349,21 +21454,21 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _innerSlider = __webpack_require__(175);
+	var _innerSlider = __webpack_require__(177);
 
-	var _objectAssign = __webpack_require__(181);
+	var _objectAssign = __webpack_require__(183);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _json2mq = __webpack_require__(188);
+	var _json2mq = __webpack_require__(190);
 
 	var _json2mq2 = _interopRequireDefault(_json2mq);
 
-	var _reactResponsiveMixin = __webpack_require__(190);
+	var _reactResponsiveMixin = __webpack_require__(192);
 
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 
-	var _defaultProps = __webpack_require__(183);
+	var _defaultProps = __webpack_require__(185);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
@@ -21440,7 +21545,7 @@
 	module.exports = Slider;
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21457,31 +21562,31 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _mixinsEventHandlers = __webpack_require__(176);
+	var _mixinsEventHandlers = __webpack_require__(178);
 
 	var _mixinsEventHandlers2 = _interopRequireDefault(_mixinsEventHandlers);
 
-	var _mixinsHelpers = __webpack_require__(179);
+	var _mixinsHelpers = __webpack_require__(181);
 
 	var _mixinsHelpers2 = _interopRequireDefault(_mixinsHelpers);
 
-	var _initialState = __webpack_require__(182);
+	var _initialState = __webpack_require__(184);
 
 	var _initialState2 = _interopRequireDefault(_initialState);
 
-	var _defaultProps = __webpack_require__(183);
+	var _defaultProps = __webpack_require__(185);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
-	var _classnames = __webpack_require__(184);
+	var _classnames = __webpack_require__(186);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _track = __webpack_require__(185);
+	var _track = __webpack_require__(187);
 
-	var _dots = __webpack_require__(186);
+	var _dots = __webpack_require__(188);
 
-	var _arrows = __webpack_require__(187);
+	var _arrows = __webpack_require__(189);
 
 	var InnerSlider = _react2['default'].createClass({
 	  displayName: 'InnerSlider',
@@ -21634,7 +21739,7 @@
 	exports.InnerSlider = InnerSlider;
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21644,13 +21749,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _trackHelper = __webpack_require__(177);
+	var _trackHelper = __webpack_require__(179);
 
-	var _helpers = __webpack_require__(179);
+	var _helpers = __webpack_require__(181);
 
 	var _helpers2 = _interopRequireDefault(_helpers);
 
-	var _objectAssign = __webpack_require__(181);
+	var _objectAssign = __webpack_require__(183);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21823,7 +21928,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21833,7 +21938,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _ReactDOM = __webpack_require__(178);
+	var _ReactDOM = __webpack_require__(180);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
@@ -21949,7 +22054,7 @@
 	exports.getTrackLeft = getTrackLeft;
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21974,7 +22079,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21989,17 +22094,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ReactDOM = __webpack_require__(178);
+	var _ReactDOM = __webpack_require__(180);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
-	var _reactLibReactTransitionEvents = __webpack_require__(180);
+	var _reactLibReactTransitionEvents = __webpack_require__(182);
 
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 
-	var _trackHelper = __webpack_require__(177);
+	var _trackHelper = __webpack_require__(179);
 
-	var _objectAssign = __webpack_require__(181);
+	var _objectAssign = __webpack_require__(183);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -22275,7 +22380,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22389,7 +22494,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22421,7 +22526,7 @@
 
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22471,7 +22576,7 @@
 	module.exports = initialState;
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22524,7 +22629,7 @@
 	module.exports = defaultProps;
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22578,7 +22683,7 @@
 
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22593,11 +22698,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _objectAssign = __webpack_require__(181);
+	var _objectAssign = __webpack_require__(183);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _classnames = __webpack_require__(184);
+	var _classnames = __webpack_require__(186);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22726,7 +22831,7 @@
 	exports.Track = Track;
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22741,7 +22846,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(184);
+	var _classnames = __webpack_require__(186);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22805,7 +22910,7 @@
 	exports.Dots = Dots;
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22822,7 +22927,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(184);
+	var _classnames = __webpack_require__(186);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22922,10 +23027,10 @@
 	exports.NextArrow = NextArrow;
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var camel2hyphen = __webpack_require__(189);
+	var camel2hyphen = __webpack_require__(191);
 
 	var isDimension = function (feature) {
 	  var re = /[height|width]$/;
@@ -22978,7 +23083,7 @@
 	module.exports = json2mq;
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports) {
 
 	var camel2hyphen = function (str) {
@@ -22992,12 +23097,12 @@
 	module.exports = camel2hyphen;
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var canUseDOM = __webpack_require__(191);
-	var enquire = canUseDOM && __webpack_require__(192);
-	var json2mq = __webpack_require__(188);
+	var canUseDOM = __webpack_require__(193);
+	var enquire = canUseDOM && __webpack_require__(194);
+	var json2mq = __webpack_require__(190);
 
 	var ResponsiveMixin = {
 	  media: function (query, handler) {
@@ -23027,7 +23132,7 @@
 	module.exports = ResponsiveMixin;
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports) {
 
 	var canUseDOM = !!(
@@ -23039,7 +23144,7 @@
 	module.exports = canUseDOM;
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23337,7 +23442,7 @@
 	}));
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

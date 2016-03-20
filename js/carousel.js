@@ -14,33 +14,35 @@ class LeftNavButton extends Component {
 }
 
 class Carousel extends Component {
-    render () {
-        var settings = {
-            //dots: true,
-            // infinite: true,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 2,
-            arrows: true,
-            nextArrow: LeftNavButton,
-            prevArrow: RightNavButton
-        }
+    settings = {
+        // dots: true,
+        // infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        arrows: true,
+        nextArrow: LeftNavButton,
+        prevArrow: RightNavButton
+    }
 
+    div =  <div id="carousel">
+                    <span className="title">Découvrer les dernières nouveautés</span>
+                    <Slider {...this.settings}>
+                        <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
+                        <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
+                    </Slider>
+                </div>
+
+    render () {
         return (
-            <div id="carousel">
-                Découvrer les dernières nouveautés
-                <Slider {...settings}>
-                    <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/c33/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/693/?retina=true" /></div>
-                    <div><img src="http://fakeimg.pl/50x40/eee/e33/?retina=true" /></div>
-                </Slider>
-            </div>
+            this.div
         );
     }
 };

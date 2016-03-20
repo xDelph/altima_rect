@@ -7,7 +7,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div>
-				<div id="logo" />
+				<div id="logo">altima<span className="dot">°</span></div>
 				<LoginForm />
 				<Menu />
 			</div>

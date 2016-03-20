@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+import formUtils from './formUtils';
+
 class LoginForm extends Component {
 
-  state = { username: '', password: '' }
+  state = { username: '', password: ''}
 
   handleChange = (e, field) => {
     this.setState({
@@ -16,20 +18,15 @@ class LoginForm extends Component {
   }
 
   render() { 
+  	var disableSubmit = !this.state.username || !this.state.password;
+
     return (
-      <form id="loginForm" className="columns small-12 medium-3" onSubmit={this.handleSubmit}>
-        <label>Username
-          <input type="text" onChange={(e) => this.handleChange(e, 'username')} value={this.state.username} />
-        </label>
+	    <form id="loginForm" className="columns small-12 medium-3" onSubmit={this.handleSubmit}>
+			{formUtils.getInput({type: "text", placeholder: "Votre login", onChange: (e) => this.handleChange(e, "username"), value: this.state.username})}
+			{formUtils.getInput({type: "password", placeholder: "Votre mot de passe", onChange: (e) => this.handleChange(e, "password"), value: this.state.password})}
 
-        <label>Password
-          <input type="password" onChange={(e) => this.handleChange(e, 'password')} value={this.state.password} />
-        </label>
-
-          <button type="submit" disabled={!this.state.username || !this.state.password} className="primary button float-right">
-            Log in
-          </button>
-      </form>
+			{formUtils.getButton({type: "submit", disabled: disableSubmit}, "Ok")}
+	    </form>
     )
   }
 

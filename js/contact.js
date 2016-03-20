@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 
+import formUtils from './formUtils';
+
+function  getInputLabeled(labelText, inputType, handleChange, inputChange, inputValue) {
+	return (
+		<label>{labelText}
+			<input type={inputType} onChange={(e) => handleChange(e, inputChange)} value={inputValue} />
+		</label>
+	)
+}
+
 export class Newsletter extends Component {
 	state = { 
 		name: '',
@@ -9,24 +19,17 @@ export class Newsletter extends Component {
 		message: '',
 		validation: '',
 		send: false,
-		hidden:''
+		display: 'block'
 	}
 
 	componentDidMount() {
-		// un article se display en grand format, on hide la zone de contact
-	    this.pubsub_token_hide = PubSub.subscribe('articleViewShow', function(topic, id) {
-	      this.setState({ hidden: 'hidden' });
-	  	}.bind(this));
-
-	    // on redisplay la zone de contact
-	  	this.pubsub_token_show = PubSub.subscribe('articleViewHide', function(topic, id) {
-	      this.setState({ hidden: '' });
-	  	}.bind(this));
+		this.pubsub_token = PubSub.subscribe('modifyHomeState', function(topic, display) {
+			this.setState({display: display});
+		}.bind(this));
     }
 
     componentWillUnmount() {
-    	PubSub.unsubscribe(this.pubsub_token_hide);
-    	PubSub.unsubscribe(this.pubsub_token_show);
+    	PubSub.unsubscribe(this.pubsub_token);
     }
 
 	handleChange = (e, field) => {
@@ -48,47 +51,35 @@ export class Newsletter extends Component {
 	}
 
 	render() {
+		var disableSubmit = !this.state.name || 
+							!this.state.firstname || 
+							!this.state.mail || 
+							!this.state.object ||
+							!this.state.message;
+		var showErrorMessage = this.state.validation != '' ? {display:"block"} : {display:"none"};
+		var showFormSend = this.state.send ? {display:"block"} : {display:"none"};
+
 		return (
-			<div id="contact" className={this.state.hidden}>
-				CONTACTEZ NOUS PAR TÉLÉPHONE OU PAR E-MAIL<br />
-				Contrary to popular belief. Lorem ipsum is not simply random text.<br />
+			<div id="contact" style={{display: this.state.display}}>
+				<p>CONTACTEZ NOUS PAR TÉLÉPHONE OU PAR E-MAIL</p>
+				<p>Contrary to popular belief. Lorem ipsum is not simply random text.</p>
 
 				<div className="num">03 28 330 830</div>
 
 				<form id="contactForm" onSubmit={this.handleSubmit} style={!this.state.send ? {display:"block"} : {display:"none"}}>
-					<label>Nom : *
-						<input type="text" onChange={(e) => this.handleChange(e, 'name')} value={this.state.name} />
-					</label><br />
-
-					<label>Prénom : *
-						<input type="text" onChange={(e) => this.handleChange(e, 'firstname')} value={this.state.firstname} />
-					</label><br />
-
-					<label>Addresse e-mail : *
-						<input type="text" className="obligatoire"onChange={(e) => this.handleChange(e, 'mail')} value={this.state.mail} />
-					</label><br />
-
-					<label>Objet du message : *
-						<input type="text" onChange={(e) => this.handleChange(e, 'object')} value={this.state.object} />
-					</label><br />
-
-					<label>Message : *
-						<textarea onChange={(e) => this.handleChange(e, 'message')} value={this.state.message} />
-					</label>
+					{formUtils.getInputLabeled("Nom : *", {type: "text", onChange: (e) => this.handleChange(e, "name"), value: this.state.name})}
+					{formUtils.getInputLabeled("Prénom : *", {type: "text", onChange: (e) => this.handleChange(e, "firstname"), value: this.state.firstname})}
+					{formUtils.getInputLabeled("Adresse e-mail : *", {type: "text", onChange: (e) => this.handleChange(e, "mail"), value: this.state.mail})}
+					{formUtils.getSelectLabeled("Objet du message : *", {type: "text", onChange: (e) => this.handleChange(e, "object")}, ['', 'Plus d\'information', 'Problème'])}
+					{formUtils.getTextAreaLabeled("Message : *", {onChange: (e) => this.handleChange(e, "message"), value: this.state.message})}
 
 					<div className="mandatory">* Champs obligatoires</div>
-					<div className="validation" style={this.state.validation != '' ? {display:"block"} : {display:"none"}}>{this.state.validation}</div>
+					<div className="validation" style={showErrorMessage}>{this.state.validation}</div>
 
-					<button type="submit" disabled={!this.state.name || 
-												!this.state.firstname || 
-												!this.state.mail || 
-												!this.state.object || 
-												!this.state.message}> 
-						Envoyer
-					</button>
+					{formUtils.getButton({type: "submit", disabled: disableSubmit, className: ""}, "Envoyer")}
 				</form>
 
-				<div className="send" style={this.state.send ? {display:"block"} : {display:"none"}}>Thanks</div>
+				<div className="send" style={showFormSend}>Thanks</div>
 			</div>
 		);
 	}

@@ -1,3 +1,50 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ALTIMA CSS */
+
 body {
 	max-width: 768px;
 	text-align: center;
@@ -6,12 +53,21 @@ body {
     font-size: 0.8em;
 }
 
+a:hover {
+    cursor: pointer; cursor: hand;
+}
+
+a[disabled]:hover {
+    cursor: initial;
+}
+
 #header, #body, #footer {
     text-align: initial;
 }
 
 #body {
     padding: 20px 0;
+    color: grey;
 }
 
 .hidden {
@@ -22,61 +78,112 @@ body {
 /* HEADER */
 #header {
     margin-top: 5px;
+    position: relative;
 }
 
 #logo {
-	width: 60px;
-	height: 30px;
-	background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 3em;
 	float: left;
+    font-weight: bold;
+}
+
+#logo .dot {
+    color: rgb(193, 10, 66);
 }
 
 #loginForm {
 	float: right;
+    padding-top: 10px;
+}
+
+#loginForm input {
+    margin-right: 10px;
 }
 
 #menu {
 	clear: both;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 #menu .menuItem {
 	float: right;
-	padding-left: 20px; 
+	margin-left: 50px; 
+    position: relative;
+}
+
+#menu .menuItem a {
+    color: rgb(193, 10, 66);
+    font-weight: bold;
+}
+
+#menu .menuItem .shape {
+    position: absolute;
+    top: 20px; left: 0;
+    width:100%; height: 10px; 
+    background: rgb(140, 10, 66);
+}
+#menu .menuItem .shape:before {
+    content: "";
+    position: absolute;
+    top: 10px; right: 0;
+    width: 50%; height: 8px;
+    background: linear-gradient(to right bottom, rgb(140, 10, 66) 50%, transparent 50%)
+}
+
+#menu .menuItem .shape:after {
+    content: "";
+    position: absolute;
+    top: 10px; left: 0;
+    width: 50%; height: 8px;
+    background: linear-gradient(to left bottom, rgb(140, 10, 66) 50%, transparent 50%)
+}
+
+#menuSeparator {
+    clear: both;
+    height: 7px;
 }
 
 #menuBar {
 	clear: both;
 	margin: 0 -100%;
 	height: 10px;
-	background-color: red;
+	background-color: rgb(193, 10, 66);
 }
 
 
 /* BODY */
 
-#body h1 {
+#body h1.title {
     margin: auto;
     text-align: center;
+    color: lightgrey;
+    font-size: 2.8em;
+    margin-bottom: 10px;
 }
+
 
 #newsletter, #contact {
     margin-top: 15px;
-    border: 1px solid black;
+    border: 1px solid darkgrey;
+    border-radius: 10px;
     padding: 15px;
     background-color: lightgrey;
+
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
+
+    -webkit-box-shadow: inset -1px 3px 4px 0px darkgrey;
+    -moz-box-shadow: inset -1px 3px 4px 0px darkgrey;
+    box-shadow: inset -1px 3px 4px 0px darkgrey;
 }
 
 #newsletter, #articleList {
     float: left;
     width: 45%;
-}
-
-#articleList.big {
-    width: 100%;
 }
 
 #newsletter {
@@ -99,9 +206,13 @@ body {
 }
 
 #contact .num {
-    margin-top: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    margin: 10px 0px;
+    padding: 3px 0px;
+    color: rgb(193, 10, 66);
+    font-weight: bold;
+    font-size: 1.1em;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
     text-align: center;
 }
 
@@ -111,6 +222,8 @@ body {
 
 #contactForm label {
     display: inline-block;
+    color: black;
+    margin-bottom: 5px;
 }
 
 #contactForm label, #contactForm button, #contactForm .mandatory, #contactForm .validation {
@@ -122,13 +235,17 @@ body {
     padding-right: 40px;
 }
 
-#contactForm input {
+#contactForm input, #contactForm select, #contactForm textarea {
     margin-left: 10px;
     width: 150px;
+    color: black;
+}
+
+#contactForm select {
+    width: 156px;
 }
 
 #contactForm textarea {
-    width: 150px;
     max-width: 150px;
     max-height: 150px;
     height: 80px;
@@ -139,7 +256,7 @@ body {
 }
 
 #contactForm .validation {
-    color: red;
+    color: rgb(193, 10, 66);
 }
 
 #contactForm .send {
@@ -155,15 +272,38 @@ body {
 
 }
 
+#articleList.bigFormat {
+    width: 100%;
+}
+
 #articleList .article {
     width: 100%;
     clear: both;
     margin: 10px 0;
 }
 
+#articleList .article p {
+    margin: 5px 0 10px 0;
+}
+
 #articleList .article .thumbs {
     float: left;
     margin-right: 10px;
+}
+
+#articleList .article .title {
+    font-size: 1.1em;
+    padding-top: 10px;
+    color: rgb(193, 10, 66);
+}
+
+#articleList .article .date {
+    font-size: 0.8em;
+    text-indent: 20px;
+}
+
+#articleList .article .data {
+    position: relative;
 }
 
 #articleList .article .content {
@@ -172,8 +312,14 @@ body {
 }
 
 #articleList .article .plus {
-    padding-left: 25px;
-    display: inline;
+    position: absolute;
+    right: 5px;
+    color: rgb(193, 10, 66);
+    text-decoration: underline;
+}
+
+#articleList .article .prev, #articleList .article .next {
+    color: black;
 }
 
 #articleList .article .prev {
@@ -191,12 +337,19 @@ body {
     padding-top: 20px;
 }
 
+#carousel .title {
+    color: rgb(193, 10, 66);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
 #carousel img {
     padding: 0 5px;
 }
 
 .slick-slider {
     margin: 0 50px;
+    padding-top: 10px;
 }
 
 .slick-list {
@@ -220,4 +373,5 @@ body {
 #footer {
     margin-bottom: 5px;
     text-align: center;
+    font-weight: bold;
 }
